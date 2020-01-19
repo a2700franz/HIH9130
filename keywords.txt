@@ -1,0 +1,12 @@
+################################################################################
+# color map for library HIH9130
+################################################################################
+
+HIH9130  	    KEYWORD2
+begin       	KEYWORD2
+readTempHum   KEYWORD2
+Version      	KEYWORD2
+Temp         	KEYWORD2
+Hum          	KEYWORD2
+State    	    KEYWORD2
+NoVal       	KEYWORD2
