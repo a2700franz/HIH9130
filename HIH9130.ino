@@ -3,6 +3,8 @@
 
   History -----------------------------------------------------
   2020-01-19 V1.0
+               changes to use library 24C31 V2
+  2020-01-26 V1.1
 -------------------------------------------------------------
 
   Hardware ----------------------------------------------------
@@ -51,7 +53,7 @@
 
 //declarations for prg
 String PrgName = "HIH9130 example";
-String PrgVersion = "1.0";
+String PrgVersion = "1.1";
 
 //instance 24C32
 HIH9130 myTH;
@@ -67,7 +69,8 @@ void setup() {
   Wire.setClock(400000);
 
   //init class HIH9130
-  myTH.begin(HIH9130_DEFAULT_ADDRESS);
+  myTH.begin(HIH9130_DEFAULT_ADDRESS, true);
+  myTH.checkPresence();
 }
 
 void loop() {

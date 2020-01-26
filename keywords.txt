@@ -4,6 +4,7 @@
 
 HIH9130  	    KEYWORD2
 begin       	KEYWORD2
+checkPresence KEYWORD2
 readTempHum   KEYWORD2
 Version      	KEYWORD2
 Temp         	KEYWORD2

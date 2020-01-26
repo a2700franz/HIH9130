@@ -4,6 +4,9 @@ Franz Stoiber 2019
 
 History -----------------------------------------------------
 2019-10-05 V1
+           check if device is present now in function checkPresence
+           new function logInfo can be activated in function begin
+2020-01-26 V2
 -------------------------------------------------------------
 */
 
@@ -18,16 +21,21 @@ History -----------------------------------------------------
 
 class HIH9130 {
   public:
-    const uint8_t Version = 1;
+    const uint8_t Version = 2;
     const float NoVal = -99.;
     uint8_t State;
     float Temp = NoVal;
-    float Hum = NoVal; 
-    bool begin(uint8_t I2CAdr);
+    float Hum = NoVal;
+    
+    void begin(uint8_t I2CAdr, bool Log = false);
+    bool checkPresence();
     void readTempHum();
                
   private:
     uint8_t DeviceAdr;
+    bool SerialLog;
+    
+    void logInfo(const char *Item);
 };
 
 #endif
